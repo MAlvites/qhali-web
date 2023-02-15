@@ -1,0 +1,365 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+$color-celeste: #1499DB;
+$color-azul: #042354;
+$color-morado: #9F42F5;
+
+
+.bot-actions-content {
+    overflow-x: hidden;
+    height: 360px;
+}
+
+.call-img-pointer {
+    width: 100px;
+    cursor: pointer;
+}
+
+.call-img {
+    width: 100px;
+}
+
+.navbar-user {
+    position: absolute;
+    right: 50px;
+    height: 100%;
+    top: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.popup-em {
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 10px 10px 10px 0;
+    border-style: solid;
+    border-color: transparent $color-celeste transparent transparent;
+    position: absolute;
+    top: 14px;
+    left: -12px;
+}
+
+.popup {
+    width: 170px;
+    background: transparent;
+    padding: 5px 15px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    border: 2px solid $color-celeste;
+    text-align: center;
+    white-space: normal;
+    font-size: 12px;
+}
+
+.bot-navbar {
+    position: absolute;
+    left: 50px;
+    height: 100%;
+}
+
+.img-navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 200px;
+    top: -8px;
+}
+.login-button {
+    height: 44px;
+    color: white;
+    font-size: 18px;
+    background-color: $color-celeste !important;
+    border-color: $color-celeste !important;
+}
+
+.login-input {
+    border: 2px solid $color-celeste!important;
+    border-radius: 10px;
+    height: 50px;
+    background-color: #fff;
+}
+
+.login-text-form {
+    font-size: 25px;
+    color: $color-celeste;
+}
+
+.login-text {
+    font-size: 25px;
+    color: $color-celeste;
+    padding: 20px 48px 10px 48px !important;
+}
+
+.login-form {
+    position: relative;
+    z-index: 23;
+    max-width: 526px;
+    width: 526px;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255);
+    border-radius: 24px !important;
+    padding-bottom: 20px !important;
+}
+
+.login-bot-img {
+    position: fixed;
+    bottom: 0px;
+}
+
+.login-content-left {
+    width: 50%;
+    background: #1499DB;
+    display: flex;
+    position: relative;
+    padding-bottom: 20px;
+    height: 100%;
+}
+
+.login-content-right {
+    width: 50%;
+    background: #042354;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.secondary {
+    background-color: $color-azul !important;
+    border-color: $color-azul !important;
+}
+
+.attent-sub-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #042354
+}
+.option-call {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        margin: 0 10px;
+        min-width: 80px;
+        width: 80px;
+    }
+}
+
+.content-options-call{
+    display: flex;
+    margin-left: 35px;
+    margin-top: 30px;
+}
+
+.content-audio-call{
+    border: 3px solid $color-azul;
+    padding: 18px 6px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 10px;
+    height: 50px
+}
+
+#video1{
+    max-width: 100%;
+    width: 854px;
+    height: 480px;
+    background: #f1f1f1;
+    border: 5px solid $color-azul;
+}
+
+#video2{
+    width: 200px;
+    height: 200px;
+    background: #f1f1f1;
+    border: 5px solid #042354;
+}
+
+.bot-action-name {
+    background: $color-celeste;
+    color: white;
+    border-radius: 7px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 3px 5px;
+}
+
+.btn-general{
+    height: 50px !important;
+    border: 3px solid $color-azul;
+    color: $color-azul !important;
+    background: white;
+    border-radius: 12px !important;
+    font-size: 25px !important;
+    text-transform: capitalize !important;
+    font-weight: bold !important;
+}
+
+.background-white {
+    background-color: #fff;
+}
+
+.content-menu {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.primary {
+    background-color: #1499db !important;
+    border-color: #1499db !important;
+}
+.dashboard-img {
+    width: 10rem;;
+}
+
+.class-position{
+    background: $color-azul;
+    color: white;
+    padding: 20px 25px 15px 70px;
+    width: max-content;
+    font-size: 30px;
+    border-radius: 0 40px 40px 0 ;
+}
+
+.content-menu-patients {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    align-items: center;
+}
+
+.table-patients{
+    margin: 15px !important;
+    border: 4px solid $color-azul;
+    border-radius: 8px 8px 20px 20px !important;
+}
+
+.v-data-table-header{
+    background: $color-celeste;
+    color: white;
+
+    span{
+        color: white !important;
+        font-size: 18px;
+    }
+}
+
+.v-pagination__item.v-pagination__item--active.primary {
+    background-color: #1499db !important;
+    border-color: #1499db !important;
+}
+
+.v-progress-linear__background.primary{
+    background-color: #1499db !important;
+    border-color: #1499db !important;
+}
+.v-progress-linear__indeterminate.short.primary {
+    background-color: #1499db !important;
+    border-color: #1499db !important;
+}
+
+.my-12 {
+    margin-top: 48px !important;
+    margin-bottom: 48px !important;
+}
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.rounded-xl {
+    border-radius: 24px !important;
+}
+
+.section-title {
+    background: $color-azul;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 15px 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.a-section-title {
+    text-decoration: none;
+}
+
+.color-secondary{
+    color: $color-azul;
+}
+
+.pt-6 {
+    padding-top: 24px !important;
+}
+
+.mb-10 {
+    margin-bottom: 40px !important;
+}
+
+.mb-8 {
+    margin-bottom: 32px !important;
+}
+
+.pr-30px {
+    padding-right: 30px !important;
+}
+
+.primary {
+    background-color: #1499db !important;
+    border-color: #1499db !important;
+}
+.danger{
+    background-color: #db1414 !important;
+    color: #ffffff !important;
+}
+
+.secondary {
+    background-color: #042354 !important;
+    border-color: #042354 !important;
+}
+
+.mr-5 {
+    margin-right: 20px !important;
+}
+
+.mr-10px {
+    margin-right: 10px !important;
+}
+.padding-support{
+    padding: 2rem 0 0 5rem;
+}
+
+@media (max-width: 1000px) {
+    .login-content-left {
+        display: none;
+    }
+    
+    .login-content-right {
+        width: 100%;
+    }
+}
+
