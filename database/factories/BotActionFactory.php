@@ -24,7 +24,8 @@ class BotActionFactory extends Factory
         return [
                 'name' => $this->faker->word(),
                 'url' => $this->faker->url(),
-                'img' => "/img/action_avatar.jpg"
+                'img' => "/img/action_avatar.jpg",
+                'type' => $this->randomElement([BotAction::TYPE_MOVE, BotAction::TYPE_ACTION])
         ];
     }
 }
