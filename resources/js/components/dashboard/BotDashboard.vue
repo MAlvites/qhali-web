@@ -6,7 +6,7 @@
         </div>
 
         <v-app>
-            <v-dialog v-model="modalQuiz" persistent :max-width="maxWidth" >
+            <v-dialog v-if="modalQuiz" persistent :max-width="maxWidth" >
                 <ResolveQuiz :data="data" @close="closeResolveQuiz()" :quizId="quizId" :who_resolve="who_resolve"></ResolveQuiz>
             </v-dialog>
         </v-app>
