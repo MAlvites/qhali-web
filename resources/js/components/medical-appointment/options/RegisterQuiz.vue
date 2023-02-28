@@ -53,7 +53,7 @@
 </template>
 
 <script>
-//import alerts from "../../helpers/alerts";
+import alerts from "../../helpers/alerts";
 import ResolveQuiz from './ResolveQuiz.vue';
 export default {
   components: { ResolveQuiz },

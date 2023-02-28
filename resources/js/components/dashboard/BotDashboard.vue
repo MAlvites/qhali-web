@@ -6,7 +6,7 @@
         </div>
 
         <v-app>
-            <v-dialog v-if="modalQuiz" persistent :max-width="maxWidth" >
+            <v-dialog v-model="modalQuiz" persistent :max-width="maxWidth" >
                 <ResolveQuiz :data="data" @close="closeResolveQuiz()" :quizId="quizId" :who_resolve="who_resolve"></ResolveQuiz>
             </v-dialog>
         </v-app>
@@ -138,7 +138,7 @@ export default {
             });
 
             var channel = pusher.subscribe('realize-quiz-channel');
-            channel.bind('realize-quiz-event', data => {
+            channel.bind('realize-quiz-event-' + this.data.user.id, data => {
                 this.quizId = data.quizId
                 this.data.patient.id = data.patientId
                 this.modalQuiz = true
@@ -146,6 +146,7 @@ export default {
         }
     },
     created() {
+        console.log(this.data);
         this.getBotAction()
         this.setupVideoChat();
         this.setupRealizeQuiz();
