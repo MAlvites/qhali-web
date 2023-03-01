@@ -86,7 +86,7 @@ Route::prefix('medical-appointments')->middleware('auth')->group(function () {
         return view('medical-appointment.index');
     });
     Route::get('/patient-managment/{patientId}', 'MedicalAppointmentController@patientManagment');
-    Route::get('/medical-attention/{patientId}/{botId}', 'MedicalAppointmentController@medicalAttention');
+    Route::get('/medical-attention/{patientId}/{botId}/{mapId}', 'MedicalAppointmentController@medicalAttention');
 });
 
 Route::prefix('quizzes')->middleware('auth')->group(function () {
@@ -113,4 +113,14 @@ Route::prefix('patient-quizzes')->middleware('auth')->group(function () {
     Route::post('search', 'PatientQuizController@search');
     Route::get('/{id}', 'PatientQuizController@getPatientQuiz');
     Route::post('relize-quiz', 'PatientQuizController@relizeQuiz');
+});
+
+Route::prefix('maps')->middleware('auth')->group(function () {
+    Route::get('/', 'MapController@index');
+    Route::post('create', 'MapController@create');
+    Route::get('list', 'MapController@list');
+    Route::post('search', 'MapController@search');
+    Route::delete('/{id}', 'MapController@delete');
+    Route::get('/{id}', 'MapController@getMap');
+    Route::post('update', 'MapController@update');
 });

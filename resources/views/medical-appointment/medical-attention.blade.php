@@ -3,6 +3,7 @@
 @php
     $data = [
         "user" => currentUser(),
+        "mapId" => $mapId,
         "patient" => $patient,
         "botId" => $botId,
         "pusher" => [

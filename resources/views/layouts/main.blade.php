@@ -92,6 +92,9 @@
                     <li>
                         <i class="far fa-clipboard"></i><a href="/quizzes">Encuestas</a>
                     </li>
+                    <li>
+                        <i class="fas fa-map"></i><a href="/maps">Mapas</a>
+                    </li>
                 @endif
             </ul>
         </div>

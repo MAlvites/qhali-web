@@ -8,9 +8,11 @@
                     </div>
                     <div class="col-12 text-center" style="padding: 0 60px;">
                         <select class="form-control" v-model="map">
-                            <option v-for="(item, index) in maps" :key="index" :value="item.img">{{item.name}}</option>
+                            <option disabled value="">Seleccionar mapa</option>
+                            <option v-for="(item, index) in maps" :key="index" :value="item">{{item.name}}</option>
                         </select>
-                        <img :src="'/img/mapas/'+map" alt="" class="w-100 mt-2">
+                        <img v-if="map == ''" src="/img/mapas/canete1.jpg" alt="" class="w-100 mt-2">
+                        <img v-else :src="map.url" alt="" class="w-100 mt-2">
                     </div>
                     <div class="col-12 mt-4" style="padding: 0 60px;">
                         <select class="form-control" v-model="botId">
@@ -62,11 +64,8 @@ export default {
     props: ['data'],
     data () {
       return {
-        map: 'canete1.jpg',
-        maps: [
-            {id: 1, name: 'Hospital de cañete - piso 1', img: 'canete1.jpg'},
-            {id: 2, name: 'Hospital de cañete - piso 2', img: 'canete2.jpg'}
-        ],
+        map: '',
+        maps: [],
         botActions: [],
         bots: [],
         botId: null,
@@ -76,6 +75,15 @@ export default {
       }
     },
     methods: {
+        getMaps() {
+            axios.get('/maps/list')
+            .then(response => {
+                this.maps = response.data.data
+            })
+            .catch(error => {
+                alerts.alertSwal(error.response.data.message, 'error')
+            })
+        },
         startVideoChat() {
             this.getPeer(this.botId, true);
         },
@@ -158,11 +166,12 @@ export default {
             
         },
         goTherapy() {
-            window.location.href = '/medical-appointments/medical-attention/'+this.data.patient.id+'/'+this.botId
+            window.location.href = '/medical-appointments/medical-attention/'+this.data.patient.id+'/'+this.botId+'/'+this.map.id
         },
     },
 
     created() {
+        this.getMaps()
         this.getBots()
         this.getBotAction()
         this.setupVideoChat();

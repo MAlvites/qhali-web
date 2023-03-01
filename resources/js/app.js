@@ -38,6 +38,7 @@ Vue.component('bot-dashboard', require('./components/dashboard/BotDashboard.vue'
 Vue.component('create-quiz', require('./components/quiz/CreateQuiz.vue').default);
 Vue.component('edit-quiz', require('./components/quiz/EditQuiz.vue').default);
 Vue.component('list-quiz', require('./components/quiz/ListQuiz.vue').default);
+Vue.component('map-component', require('./components/map/Map.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

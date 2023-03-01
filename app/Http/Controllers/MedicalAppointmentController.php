@@ -17,7 +17,7 @@ class MedicalAppointmentController extends Controller
         return view('medical-appointment.patient-managment', ['patient' => $patient]);
     }
 
-    public function medicalAttention(int $patientId, int $botId)
+    public function medicalAttention(int $patientId, int $botId, int $mapId)
     {
         $patient = Patient::find($patientId);
 
@@ -27,7 +27,8 @@ class MedicalAppointmentController extends Controller
 
         return view('medical-appointment.medical-attention', [
             'patient' => $patient,
-            'botId' => $botId
+            'botId' => $botId,
+            'mapId' => $mapId
         ]);
     }
 }

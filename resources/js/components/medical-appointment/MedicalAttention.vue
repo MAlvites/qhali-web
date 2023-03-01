@@ -8,28 +8,6 @@
                         <video id="video1" autoplay="true" class="video-there" ref="video-there" ></video>
                         <video id="video2" autoplay="true" class="video-here" ref="video-here" hidden muted="muted"></video>
                     </div>
-                    <!--
-                    <div class="col-5">
-                        <div class="content-audio-call">
-                            <v-slider
-                                v-model="volumen"
-                                :max="100"
-                                class="mx-4"
-                                ticks
-                                prepend-icon="mdi-volume-high"
-                            ></v-slider>
-                        </div>
-                        <div class="content-audio-call">
-                            <v-slider
-                                v-model="microfono"
-                                :max="100"
-                                class="mx-4"
-                                ticks
-                                prepend-icon="mdi-microphone"
-                            ></v-slider>
-                        </div>
-                    </div>
-                    -->
                     <div class="col-12">
                         <div class="option-call">
                             <img src="/img/svg/llamada.svg" alt="" class="call-img-pointer" @click="startVideoChat()">
@@ -73,12 +51,14 @@ import MoveAndActionBot from './options/MoveAndActionBot';
 import History from './options/History'
 import Quiz from './options/Quiz'
 import Action from './options/MoveAndActionBot'
+import SiteMap from './options/SiteMap'
 export default {
     components:{
         MoveAndActionBot,
         History,
         Quiz,
         Action,
+        SiteMap
     },
     props: ['data'],
     data () {
@@ -100,6 +80,7 @@ export default {
             {'value': 'historia', 'key': 'History'},
             {'value': 'encuesta', 'key': 'Quiz'},
             {'value': 'acciones', 'key': 'MoveAndActionBot'},
+            {'value': 'mapa del sitio', 'key': 'SiteMap'},
         ],
       }
     },
