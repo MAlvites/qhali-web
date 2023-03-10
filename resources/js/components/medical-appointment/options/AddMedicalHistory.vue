@@ -16,9 +16,9 @@
                         </v-card-title>
                         <v-card-text>
                             <div>
-                            <p> Fecha: 07/ 07/ 2021 </p>
-                            <p> Paciente: Diego Martín Arce Cigueñas</p>
-                            <p> Médico: Edwin Apaza</p>
+                            <p> Fecha: {{ data.current_date }} </p>
+                            <p> Paciente: {{ data.patient.name + ' ' + data.patient.last_name }}</p>
+                            <p> Médico: {{ data.user.name}}</p>
                             </div>  
                             <div>
                                 <v-form>

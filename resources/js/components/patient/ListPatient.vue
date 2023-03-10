@@ -28,6 +28,9 @@
                 <template v-slot:[`item.uri`]="{ item }">
                     <v-btn class="primary" v-if="item.uri" @click="openHistory(item.uri)">Abrir historia</v-btn>
                 </template>
+                <template v-slot:[`item.quiz`]="{ item }">
+                    <v-btn class="primary" @click="openQuiz(item.id)">Encuesta</v-btn>
+                </template>
                 <template v-slot:[`item.editar`]="{ item }">
                     <v-btn class="primary" @click="editUser(item.id)">Editar</v-btn>
                 </template>
@@ -41,14 +44,21 @@
                 @input="allData"
             ></v-pagination>
         </v-card>
+        <ListQuiz v-if="showModalListQuiz" :data="data" :show="showModalListQuiz" @close="closeModalListQuiz()"></ListQuiz>
     </div>
 </template>
 
 <script>
 import alerts from '.././helpers/alerts';
+import ListQuiz from './../medical-appointment/options/ListQuiz';
 export default {
+    components:{
+        ListQuiz
+    },
+    props: ['data'],
     data () {
       return {
+        showModalListQuiz: false,
         search: '',
         headers: [
           {
@@ -59,6 +69,7 @@ export default {
           },
           { text: 'Paciente', value: 'full_name',sortable: false, },
           { text: 'Historia Médica', value: 'uri', sortable: false },
+          { text: 'Encuestas', value: 'quiz', sortable: false },
           { text: 'Acciones', value: 'editar', sortable: false },
         ],
         desserts: [],
@@ -70,6 +81,20 @@ export default {
     },
 
     methods: {
+        closeModalListQuiz() {
+            this.data.patient.id = ''
+            this.showModalListQuiz = false
+        },
+        openQuiz (id) {
+            let data = {
+                user: this.data.user,
+                patient: {
+                    id: id
+                }
+            }
+            this.data = data
+            this.showModalListQuiz = true
+        },
         editUser (id) {
             location.href = '/patients/edit/'+id;
         },

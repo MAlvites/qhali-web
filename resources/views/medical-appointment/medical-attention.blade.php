@@ -2,6 +2,7 @@
 @section('content')
 @php
     $data = [
+        "current_date" => now()->format("d/m/Y"),
         "user" => currentUser(),
         "mapId" => $mapId,
         "patient" => $patient,
