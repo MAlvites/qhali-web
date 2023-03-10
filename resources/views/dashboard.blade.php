@@ -75,6 +75,14 @@
                             </div>
                         </a>
                     </div>
+                    <div class="col-md-4">
+                        <a href="/maps" class="a-section-title">
+                            <div class="text-center">
+                                <img src="/img/svg/menu/mapas.svg" alt="" class="dashboard-img">
+                                <p class="section-title">Mapas</p>
+                            </div>
+                        </a>
+                    </div>
                 @endif
             </div>
         @endif
