@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="class-position">Acciones del Robot</div>
+        <div class="class-position">Camara</div>
         <v-app>
             <div class="content-call-robotin">
                 <v-row>
@@ -9,6 +9,7 @@
                             <div class="content-video">
                                 <video id="video1" autoplay="false" muted="muted" class="video-here" ref="video-here" ></video>  
                             </div>
+                            <!--
                             <div class="content-options-call">
                                 <v-row>
                                     <v-col cols="5">
@@ -38,8 +39,10 @@
                                     </v-col>
                                 </v-row>
                             </div>
+                        -->
                         </div>
                     </v-col>
+                    <!--
                     <v-col cols="5" sm="12" md="5">
                         <div class="content-options-robotin">
                             <div class="content-option-volumen">
@@ -77,6 +80,7 @@
                             </div>
                         </div>
                     </v-col>
+                    -->
                 </v-row>
             </div>
         </v-app>
