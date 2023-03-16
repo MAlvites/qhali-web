@@ -33,7 +33,7 @@
         <div class="menu-right-patient">
             <ul>
                 <li :class="item.key == component ? 'active' : ''" 
-                    style="cursor: pointer; text-transform: capitalize;" 
+                    style="cursor: pointer;" 
                     v-for="(item, index) in menu" :key="index"
                     @click="selectComponent(item.key)"> {{item.value}}
                  </li>
@@ -77,10 +77,10 @@ export default {
         currentComponent: 'History',
         component: 'History',
         menu: [
-            {'value': 'historia', 'key': 'History'},
-            {'value': 'encuesta', 'key': 'Quiz'},
-            {'value': 'acciones', 'key': 'MoveAndActionBot'},
-            {'value': 'mapa del sitio', 'key': 'SiteMap'},
+            {'value': 'Historia', 'key': 'History'},
+            {'value': 'Encuesta', 'key': 'Quiz'},
+            {'value': 'Acciones', 'key': 'MoveAndActionBot'},
+            {'value': 'Mapa del sitio', 'key': 'SiteMap'},
         ],
       }
     },
