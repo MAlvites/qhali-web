@@ -63,7 +63,7 @@
                                     color="primary"
                                     dark
                                     class="mr-5 px-5"
-                                    v-if="validForm"
+                                    v-if="validateForm"
                                     @click="send"
                                     >
                                         Enviar

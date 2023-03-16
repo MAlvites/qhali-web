@@ -124,3 +124,8 @@ Route::prefix('maps')->middleware('auth')->group(function () {
     Route::get('/{id}', 'MapController@getMap');
     Route::post('update', 'MapController@update');
 });
+
+Route::prefix('authenticate')->group(function () {
+    Route::post('forgot-password', 'AuthenticateController@forgotPassword')->name('authenticate.forgot.password');
+    Route::post('reset-password', 'AuthenticateController@resetPassword')->name('authenticate.reset.password');
+});
