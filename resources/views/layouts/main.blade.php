@@ -69,9 +69,7 @@
             </div>
             <ul>
                 @if($user->role_id === 1 || $user->role_id === 2)
-                    <li>
-                        <i class="fad fa-robot"></i><a href="/bots">Qhali</a>
-                    </li>
+                    
                     <li>
                         <i class="far fa-sticky-note"></i></i><a href="/medical-appointments">Cita Médica</a>
                     </li>
@@ -95,6 +93,11 @@
                     <li>
                         <i class="fas fa-map"></i><a href="/maps">Mapas</a>
                     </li>
+                @endif
+                @if($user->role_id === 1 || $user->role_id === 2)
+                <li>
+                    <i class="fad fa-robot"></i><a href="/bots">Qhali</a>
+                </li>
                 @endif
             </ul>
         </div>

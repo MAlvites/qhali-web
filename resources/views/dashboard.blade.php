@@ -18,14 +18,7 @@
         @endif
         @if($user->role_id === 1 || $user->role_id === 2)
             <div class="row">
-                <div class="col-md-4">
-                    <a href="/bots" class="a-section-title">
-                        <div class="text-center">
-                            <img src="/img/svg/menu/robotin.svg" alt="" class="dashboard-img">
-                            <p class="section-title">Qhali</p>
-                        </div>
-                    </a>
-                </div>
+                
                 <div class="col-md-4">
                     <a href="/medical-appointments" class="a-section-title">
                         <div class="text-center">
@@ -80,6 +73,16 @@
                             <div class="text-center">
                                 <img src="/img/svg/menu/mapas.svg" alt="" class="dashboard-img">
                                 <p class="section-title">Mapas</p>
+                            </div>
+                        </a>
+                    </div>
+                @endif
+                @if($user->role_id === 1 || $user->role_id === 2)
+                <div class="col-md-4">
+                        <a href="/bots" class="a-section-title">
+                            <div class="text-center">
+                                <img src="/img/svg/menu/robotin.svg" alt="" class="dashboard-img">
+                                <p class="section-title">Qhali</p>
                             </div>
                         </a>
                     </div>
